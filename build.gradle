@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '1.5.3.RELEASE'
+    id 'org.springframework.boot' version '1.5.7.RELEASE'
 }
 
 group 'com.github.ibspoof'
@@ -27,10 +27,10 @@ jar {
 }
 
 dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.7.RELEASE'
 
-    compile group: 'com.datastax.dse', name: 'dse-java-driver-core', version: '1.2.4'
-    compile group: 'com.datastax.dse', name: 'dse-java-driver-mapping', version: '1.2.4'
+    compile group: 'com.datastax.dse', name: 'dse-java-driver-core', version: '1.4.0'
+    compile group: 'com.datastax.dse', name: 'dse-java-driver-mapping', version: '1.4.0'
 
     compile group: 'org.hibernate', name: 'hibernate-validator', version: '5.4.1.Final'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'

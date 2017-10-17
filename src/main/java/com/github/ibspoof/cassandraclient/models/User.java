@@ -2,26 +2,18 @@ package com.github.ibspoof.cassandraclient.models;
 
 import com.datastax.driver.core.LocalDate;
 import com.datastax.driver.mapping.annotations.Column;
-import com.datastax.driver.mapping.annotations.PartitionKey;
 import com.datastax.driver.mapping.annotations.Table;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
-import java.util.UUID;
 
 @Table(name = "users",
         readConsistency = "LOCAL_QUORUM",
-        writeConsistency = "LOCAL_QUORUM",
-        keyspace = "project_demo"
+        writeConsistency = "LOCAL_QUORUM"
 )
-public class User {
-
-    @PartitionKey
-    @Column(name = "user_id")
-    @NotNull
-    private UUID userId;
+public class User extends UserBase {
 
     @NotNull
     @Column(name = "first_name")
@@ -47,15 +39,6 @@ public class User {
 
     @Column(name = "birthday")
     private LocalDate birthday;
-
-
-    public UUID getUserId() {
-        return userId;
-    }
-
-    public void setUserId(UUID userId) {
-        this.userId = userId;
-    }
 
     public String getFirstName() {
         return firstName;
